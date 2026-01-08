@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .res {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <button>点击发送请求</button>
+    <div class="res"></div>
+
+    <script>
+      const btn = document.querySelector("button");
+      const res = document.querySelector(".res");
+
+      btn.addEventListener("click", () => {
+        fetch("http://127.0.0.1:8000/server", {
+          method: "POST",
+
+          headers: {
+            type: "text",
+          },
+
+          body: JSON.stringify({
+            name: "guozhao",
+            age: 19,
+          }),
+        })
+          .then((response) => {
+            return response.text();
+          })
+          .then((data) => {
+            res.innerHTML = data;
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.head{
+    color:rgb(255,0,0);
+    background-color: aquamarine;
+    font-size: 100px;
+    font-weight: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+    line-height: 1.5;
+    height:200px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.passage{
+    text-indent: 30px;
+    font-size: 30px;
+}

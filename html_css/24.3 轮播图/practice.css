@@ -1,0 +1,78 @@
+.banner {
+    width: 520px;
+    height: 304px;
+    margin: 1em auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.img img {
+    width: 520px;
+    height: 304px;
+}
+
+.img {
+    width: 1560px;
+    height: 304px;
+}
+
+.img a {
+    float: left;
+}
+
+.left,
+.right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+.left:hover,
+.right:hover {
+    background-color: rgba(0, 0, 0, .5);
+    color: black;
+    border-radius: 50%;
+}
+
+.model {
+    height: 40px;
+    width: 520px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    bottom: 0;
+}
+
+.textleft,
+.textright {
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.textleft {
+    color: white;
+    float: left;
+    margin-left: 5px;
+}
+
+.textright {
+    color: white;
+    float: right;
+    margin-right: 5px;
+}

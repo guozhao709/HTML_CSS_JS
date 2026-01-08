@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myClass = {
+        name: "网络2403班",
+        stus: ["张三", "李四", "王五", "孙六"],
+
+        [Symbol.iterator]() {
+          let index = 0;
+          return {
+            next: () => {
+              if (index < this.stus.length) {
+                return { value: this.stus[index++], done: false };
+              } else {
+                return { value: undefined, done: true };
+              }
+            },
+          };
+        },
+      };
+
+      for (v of myClass) {
+        console.log(v);
+      }
+    </script>
+  </body>
+</html>

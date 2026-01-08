@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let game = {
+        name: "game",
+        up() {
+          console.log("up");
+        },
+        down() {
+          console.log("down");
+        },
+      };
+
+      let methods = {
+        up: Symbol(),
+        down: Symbol(),
+      };
+
+      game[methods.up] = function () {
+        console.log("I am up");
+      };
+
+      game[methods.down] = function () {
+        console.log("I am down");
+      };
+
+      console.log(game);
+      game[methods.up](); // I am up
+      game["up"](); // up
+    </script>
+  </body>
+</html>

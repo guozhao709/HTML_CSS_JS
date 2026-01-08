@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炫酷登录页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 380px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .login-box {
+            position: relative;
+            width: 100%;
+        }
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label {
+            top: -10px;
+            left: 5px;
+            font-size: 0.8em;
+            color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #4ecdc4;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background: #ff6b6b;
+            letter-spacing: 2px;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        button:hover::before {
+            left: 100%;
+        }
+
+        .social-login {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icon {
+            font-size: 24px;
+            color: #fff;
+            opacity: 0.6;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .social-icon:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 动态背景元素 */
+        .bg-bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .bg-bubbles span {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px);
+            }
+            50% {
+                transform: translateY(20px) translateX(-10px);
+            }
+            75% {
+                transform: translateY(-30px) translateX(15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-bubbles"></div>
+    
+    <div class="container">
+        <div class="login-box">
+            <h2>欢迎登录</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>用户名</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label>密码</label>
+                </div>
+                <button type="submit">立即登录</button>
+            </form>
+            <div class="social-login">
+                <i class="social-icon fab fa-weixin"></i>
+                <i class="social-icon fab fa-qq"></i>
+                <i class="social-icon fab fa-weibo"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script>
+        // 创建背景气泡
+        function createBubbles() {
+            const bubblesContainer = document.querySelector('.bg-bubbles');
+            for (let i = 0; i < 15; i++) {
+                const bubble = document.createElement('span');
+                bubble.style.left = Math.random() * 100 + '%';
+                bubble.style.top = Math.random() * 100 + '%';
+                bubble.style.width = bubble.style.height = 
+                    Math.random() * 30 + 10 + 'px';
+                bubble.style.animationDelay = Math.random() * 5 + 's';
+                bubblesContainer.appendChild(bubble);
+            }
+        }
+
+        // 输入框动画
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentNode.style.transform = 'scale(1.02)';
+            });
+            input.addEventListener('blur', () => {
+                input.parentNode.style.transform = 'scale(1)';
+            });
+        });
+
+        // 初始化
+        window.addEventListener('DOMContentLoaded', () => {
+            createBubbles();
+        });
+    </script>
+</body>
+</html>

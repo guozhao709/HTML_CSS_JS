@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .res {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <button>点击发送请求</button>
+    <div class="res"></div>
+
+    <script>
+      const btn = document.querySelector("button");
+      const res = document.querySelector(".res");
+
+      // 为按钮添加点击事件监听器
+      btn.addEventListener("click", (e) => {
+        // 创建一个新的 XMLHttpRequest 对象
+        const xhr = new XMLHttpRequest();
+        // 初始化一个新的 HTTP 请求，请求方法为 GET，URL 为本地服务器地址
+        xhr.open("GET", "http://127.0.0.1:8000/server");
+        // 发送 HTTP 请求
+        xhr.send();
+
+        // 为 XMLHttpRequest 对象添加 readystatechange 事件监听器
+        xhr.addEventListener("readystatechange", () => {
+          // 检查请求是否已完成
+          if (xhr.readyState === 4) {
+            // 检查 HTTP 状态码是否在 200-299 之间，表示请求成功
+            if (xhr.status >= 200 && xhr.status < 300) {
+              // 将服务器返回的响应内容设置为 res 元素的 HTML 内容
+              res.innerHTML = xhr.response;
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

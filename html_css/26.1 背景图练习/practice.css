@@ -1,0 +1,87 @@
+body{
+    background-image: url("https://www.gaming.net/wp-content/uploads/2022/10/wallpaper-minecraft-alex-steve-universe.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header{
+    height: 95px;
+    width: 100%;
+    background-color: #242222;
+    position: relative;
+}
+#shangbu{
+    color: white;
+    text-align: center;
+    line-height: 95px;
+    display: inline-block;
+    margin-left: 600px;
+}
+#shangbu a{
+    padding-right: 45px;
+}
+#youshangbu{
+    float: right;
+    color: white;
+    line-height: 95px;
+    margin-right: 105px;
+}
+#youshangbu a{
+    padding-left: 45px;
+}
+header .img{
+    width: 290px;
+    height: 52px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 30px;
+    background-image: url(./imagine/minecraft.png);
+    background-repeat: no-repeat;
+}
+header .img h1{
+    display: none;
+}
+.center{
+    position: relative;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center .head{
+    text-align: center;
+    font-size: 4em;
+    color: white;
+    background-color: rgba(0,0,0,.5);
+}
+.center .mid{
+    width:90% ;
+    height: 350px;
+    position: absolute;
+    margin-top: 85px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center .mid a img{
+    width: 300px;
+}
+.center .mid a{
+ float: left;
+ width: 300px;
+ margin-right: 53px;
+}
+.center .mid a:nth-child(4){
+    margin-right: 0;
+}
+.center .mid a p{
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(0,0,0,.5);
+}
+

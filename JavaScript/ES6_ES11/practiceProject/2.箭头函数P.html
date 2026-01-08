@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div.id {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="id"></div>
+
+    <script>
+      (function () {
+        //1. 点击div后 2s后变色
+        const div = document.querySelector(".id");
+        div.addEventListener("click", function () {
+          setTimeout(() => {
+            this.style.background = "pink";
+          }, 2000); // 不能使用普通函数, 普通函数的this是谁调用, 指向谁
+        });
+      })();
+
+      (function () {
+        // 2. 从数组中返回偶数
+        const arr = [1, 4, 6, 8, 5, 10];
+        arr.filter((item) => item % 2 === 0);
+      })();
+    </script>
+  </body>
+</html>

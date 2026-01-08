@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result, #res {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="result"></div>
+    <div id = "res"></div>
+
+    <script>
+      const result = document.getElementById("result");
+
+      result.addEventListener("mouseover", function (e) {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:8000/server");
+
+        // 设置请求头(一般是身份校验的信息)
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded"
+        );
+        xhr.setRequestHeader("name", "guozhao");
+        xhr.send("guozhao");
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              result.innerHTML = xhr.response;
+            } else {
+              console.log("请求失败");
+            }
+          }
+        };
+      });
+
+      const res = document.getElementById("res");
+
+      window.addEventListener("keyup", function (e) { 
+        console.log("the keyup event has been triggered");
+        
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:8000/json-server");
+        xhr.send();
+        xhr.addEventListener("readystatechange", function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              let data = JSON.parse(xhr.response);
+              console.log(data);
+              res.innerHTML = data.name;
+            } else {
+              console.log("请求失败");
+            }
+          }
+        });
+      })
+
+
+    </script>
+  </body>
+</html>

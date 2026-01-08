@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        section{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            perspective: 600px;
+        }
+        section div[class^="box"] {
+            transform-style: preserve-3d;
+            transition: all 1s ease;
+        }
+        section div[class^="box"] .front{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            z-index: 1;
+            transform: translateZ(10px);
+        }
+
+        section div[class^="box"] .bottom{
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            transform:translateY(10px) rotateX(-90deg);
+            
+        }
+
+        section div[class^="box"]:hover{
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="box1">
+            <div class="front">my name is</div>
+            <div class="bottom">guozhao</div>
+        </div>
+    </section>
+</body>
+
+</html>

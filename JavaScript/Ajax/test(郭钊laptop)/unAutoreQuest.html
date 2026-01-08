@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手动取消请求</title>
+    <style>
+        #result {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <button id = "sendRequest">发送请求</button>
+    <button id = "cancelRequest">取消请求</button>
+    <div id="result"></div>
+
+    <script>
+        const sendRequestBtn = document.getElementById("sendRequest");
+        const cancelRequestBtn = document.getElementById("cancelRequest");
+        const result = document.getElementById("result");
+
+        let xhr = null;
+        let isSending = false;  // 是否正在发送请求
+
+        sendRequestBtn.addEventListener("click", (e) => {
+        
+        if(isSending === true) xhr.abort(); // 如果正在发送请求，则取消上一个请求
+        isSending = true;
+
+        xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:8000/server-delay");
+        xhr.send();
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            isSending = false;  // 请求完成，设置标志位为false
+            if (xhr.status >= 200 && xhr.status < 300) {
+              result.innerHTML = xhr.response;
+            } else {
+              console.log("请求失败");
+            }
+          }
+        };
+      });
+
+      cancelRequestBtn.addEventListener("click", (e) => {
+        if (xhr) {
+          xhr.abort(); // 取消请求
+          result.innerHTML = "请求已取消";
+        }
+      });
+
+
+    </script>
+</body>
+</html>

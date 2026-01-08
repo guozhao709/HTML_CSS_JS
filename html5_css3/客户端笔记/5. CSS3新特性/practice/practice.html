@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @keyframes move {
+            0% {
+                
+            }
+
+            25% {
+                transform: translate(100px, 100px);
+            }
+
+            100% {
+                transform: translate(100px, 100px) rotate(360deg);
+            }
+        }
+
+        @keyframes moveback {
+            0% {
+                transform: translate(100px, 100px) rotate(360deg);
+            }
+
+            75% {
+                transform: translate(100px, 100px);
+            }
+
+            100% {}
+        }
+
+        section {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: aqua;
+        }
+
+        section div[class^=box] {
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+
+        section div:first-child {
+            background-color: red;
+            transition: all 1s linear;
+        }
+
+        section div:first-child:hover {
+            transform: translate(100px, 100px) rotate(360deg);
+        }
+
+        section div:first-child:hover+div {
+            animation: move 1s ease forwards;
+        }
+
+        section div:first-child+div {
+            animation: moveback 1s ease forwards;
+        }
+
+        section div:last-child {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="box1"><span>The cosmos moves with unyielding vitality; thus, the noble soul ceaselessly cultivates self-renewal</span></div>
+        <div class="box2"><span>The cosmos moves with unyielding vitality; thus, the noble soul ceaselessly cultivates self-renewal</span></div>
+    </section>
+
+</body>
+
+</html>

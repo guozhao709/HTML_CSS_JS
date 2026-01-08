@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .transfer {
+            width: 0;
+            height: 0;
+            border-top: 170px solid transparent;
+            border-right: 0px solid transparent;
+            border-bottom: 0px solid transparent;
+            border-left: 100px solid pink;
+        }
+
+        .text {
+            width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-decoration: underline dotted red 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transfer"></div>
+    <div class="text"><span>这是一段用于测试的文字</span></div>
+</body>
+
+</html>

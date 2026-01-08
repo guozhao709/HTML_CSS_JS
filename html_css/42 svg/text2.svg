@@ -1,0 +1,6 @@
+<svg style="background:gray;" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+    <circle  cx="250" cy="250" r="200" fill="white" />
+    <path d="M250 50 A100 100 0 0 1 250 250 A100 100 0 0 0 250 450 A200 200 0 0 1 250 50"  fill="black"/>
+    <circle cx="250" cy="150" r="25" fill="white" />
+    <circle cx="250" cy="350" r="25" fill="black" />
+</svg>

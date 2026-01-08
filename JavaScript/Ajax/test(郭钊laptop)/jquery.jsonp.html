@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <button>click</button>
+    <div></div>
+
+
+    <script>
+
+        const btn = $('button');
+        const div = $('div');
+
+        btn.click(function(){
+            $.getJSON("http://127.0.0.1:8000/json-server-jsonp?callback=?", // 固定写法
+                function(data){
+                    console.log(data);
+                    div.html(data.exist);
+                }
+            )
+        })
+           
+                
+
+    </script>
+</body>
+</html>

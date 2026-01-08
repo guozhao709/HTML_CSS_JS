@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h2>短信登录 / 注册</h2>
+            <div class="tab-buttons">
+                <button class="tab-button active">短信登录</button>
+                <button class="tab-button">密码登录</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="phone">请仔细阅读 豆瓣使用协议、豆瓣个人信息保护政策</label>
+                    <input type="text" id="phone" placeholder="+86 手机号">
+                </div>
+                <div class="form-group">
+                    <label for="code">验证码</label>
+                    <input type="text" id="code" placeholder="验证码">
+                    <button type="button" class="send-code">获取验证码</button>
+                </div>
+                <button type="submit" class="login-button">登录豆瓣</button>
+            </form>
+            <div class="third-party-login">
+                <p>收不到验证码</p>
+                <div class="social-buttons">
+                    <button class="social-button">第三方登录</button>
+                    <button class="social-button">第三方登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

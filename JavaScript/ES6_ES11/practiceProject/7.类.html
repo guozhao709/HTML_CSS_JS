@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文档标题</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name, age, gender) {
+          this.name = name;
+          this.age = age;
+          this.gender = gender;
+        }
+
+        sayHello() {
+          console.log(`my name is ${this.name}, ${this.age}, ${this.gender}`);
+        }
+      }
+
+      let person = new Person("tom", 18, "m");
+
+      class Student extends Person {
+        constructor(name, age, gender, cls, id){
+            super(name, age, gender);
+            this.cls = cls;
+            this.id = id;
+        }
+      }
+
+      let stu = new Student("tom", 18, "m", "3cls", "10010");
+      console.log(stu);
+
+      console.log(Object.is(0, -0)); 
+      
+    </script>
+  </body>
+</html>

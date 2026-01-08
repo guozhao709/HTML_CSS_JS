@@ -1,0 +1,48 @@
+a{
+    color: #37a;
+}
+.container{
+    font: 12px Helvetica, Arial, sans-serif;
+    color: #999;
+    padding-top: 20px;
+    border-top: 1px dashed;
+    margin-top: 10px;
+}
+.container .left{
+    width: 554px;
+    float: left;
+}
+.container .left .first{
+    margin-bottom: 3px;
+}
+.container .left .sign li{
+    float: left;
+    border-right: 1px solid;
+    padding-right: 7px;
+    padding-left: 7px;
+    height: 10px;
+    line-height: 10px;
+    margin: 4px 0;
+    /* color: #37a; */
+}
+.container .left .mid #tousu, #jubao{
+    height: 16px;
+    width: 110px;
+    vertical-align: middle;
+}
+.container .last{
+    margin: 2px 0;
+}
+.container .last #chinajb, #office{
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+.container .right{
+    float: right;
+}
+.container .right li{
+    display: inline-block;
+    
+}
+

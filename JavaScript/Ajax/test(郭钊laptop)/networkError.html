@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>请求超时或网络错误</title>
+    <style>
+      #result,
+      #res {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <button>点击发送请求</button>
+    <div id="result"></div>
+
+    <script>
+      const result = document.getElementById("result");
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", (e) => {
+        const xhr = new XMLHttpRequest();
+        xhr.timeout = 1000;     // 设置超时时间为1秒
+        xhr.ontimeout = function () { // 处理超时
+          alert("请求超时");    
+        };
+        xhr.onerror = function () {     // 处理网络错误
+          alert("网络错误");
+        };
+        xhr.open("POST", "http://127.0.0.1:8000/server-delay");
+        xhr.send();
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              result.innerHTML = xhr.response;
+            } else {
+              console.log("请求失败");
+            }
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

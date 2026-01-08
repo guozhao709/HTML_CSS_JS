@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+
+        div {
+            position: relative;
+            width: 200px;
+            height: 30px;
+            margin: 200px auto;
+            transform-style: preserve-3d;
+            transition: all 1s linear;
+        }
+
+        div:hover {
+            transform: translateY(15px) rotateX(90deg);
+        }
+
+        div p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        div p:nth-child(1) {
+            transform: translateZ(15px);
+            background: linear-gradient(to right, red, blue);
+        }
+
+        div p:nth-child(2) {
+            transform: translateY(15px) rotateX(-90deg);
+            background: linear-gradient(blue, red);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>我是郭钊</p>
+        <p>欢迎来到神的国度</p>
+    </div>
+</body>
+
+</html>

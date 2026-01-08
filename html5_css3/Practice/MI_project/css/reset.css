@@ -1,0 +1,97 @@
+/* 去边距 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置字体为浏览器默认字体 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/* 取消斜体 */
+
+i,
+em {
+    font-style: normal;
+}
+
+/* 取消小圆点 */
+
+li {
+    list-style: none;
+}
+
+/* 取消下划线并继承颜色 */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 设置字体 */
+
+body,
+html {
+    font-size: 14px;
+    font-family: "微软雅黑", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+}
+
+/* 取消边框 */
+
+input {
+    outline: none;
+}
+
+/* 重置按钮 */
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* 清除浮动 */
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}

@@ -1,0 +1,198 @@
+ /* 公共样式 */
+ input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-indent: 5px;
+ }
+ #h2{
+    font-size: 25px;
+    background-color: #8e6c50;
+    color: white;
+    text-indent: 25px;
+    padding: 5px 0;
+ }
+
+
+
+
+.container{
+    width: 1400px;
+    /* height: 3000px; */
+    background-color: white;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .header .logof{
+    float: left;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.container .header .logos{
+    float: right;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+.container .line{
+    height: 20px;
+    background-color: #09325e;
+    margin: 20px 0 25px 0;
+}
+.container .title{
+    font-size: 40px;
+    text-align: center;
+}
+.container .article{
+    width: 1000px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .article .nov1 .nover{
+    border: 3px solid #8e6c50;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.container .article .nov1 .nover .cont{
+    margin: 5px 0;
+}
+.container .article .nov1 .nover .cont3 span{
+    margin-right: 10px;
+}
+.container .article .nov1 .nover .cont4 input{
+    width: 450px;
+}
+.container .article .nov2 .nover .left, .right{
+    float: left;
+}
+.container .article .nov2 .nover .up .left{
+    width: 200px;
+    background-color: white;
+    box-sizing: border-box;
+    border-left: 3px solid #8e6c50;
+    height: 180px;
+    border-right: 2px solid #8e6c50;
+    border-bottom: 2px solid #8e6c50;
+    padding-top: 50px;
+    text-align: center;
+}
+.container .article .nov2 .nover .up .right{
+    width: 800px;
+    height: 180px;
+    background-color: white;
+    box-sizing: border-box;
+    border-right: 3px solid #8e6c50;
+    border-bottom: 2px solid #8e6c50;
+}
+.container .article .nov2 .nover .up .right .up{
+    padding: 10px 0;
+    border-bottom: 2px solid #8e6c50;
+}
+.container .article .nov2 .nover .up .right .cont{
+    text-indent: 25px;
+    margin: 5px 0;
+}
+.container .article .nov2 .nover .down .left, .mid, .right{
+    box-sizing: border-box;
+    height: 120px;
+    float: left;
+    border-bottom: 3px solid #8e6c50;
+}
+.container .article .nov2 .nover .down .left{
+    border-left: 3px solid #8e6c50;
+    border-right: 2px solid #8e6c50;
+    width: 200px;
+    text-align: center;
+    padding: 20px 0;
+}
+.container .article .nov2 .nover .down .mid{
+    width: 500px;
+    line-height: 120px;
+    text-align: center;
+    border-right: 2px solid #8e6c50;
+}
+.container .article .nov2 .nover .down .right{
+    border-right: 3px solid #8e6c50;
+    width: 300px;
+    text-align: center;
+    padding: 25px 0;
+}
+.container .article .nov3 .nover .up .left, .mid, .right{
+    box-sizing: border-box;
+    float: left;
+    border-bottom: 2px solid #8e6c50;
+    height: 120px;
+}
+.container .article .nov3 .nover .up .left{
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    border-left: 3px solid #8e6c50;
+    border-right: 2px solid #8e6c50;
+}
+.container .article .nov3 .nover .up .mid{
+    width: 500px;
+    line-height: 120px;
+    text-align: center;
+    border-right: 2px solid #8e6c50;
+}
+.container .article .nov3 .nover .up .right{
+    width: 300px;
+    border-right: 3px solid #8e6c50;
+}
+.container .article .nov3 .nover .down .left, .mid, .right{
+    box-sizing: border-box;
+    float: left;
+    border-bottom: 2px solid #8e6c50;
+    height: 120px;
+}
+.container .article .nov3 .nover .down .left{
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    border-left: 3px solid #8e6c50;
+    border-right: 2px solid #8e6c50;
+}
+.container .article .nov3 .nover .down .mid{
+    width: 500px;
+    border-right: 2px solid #8e6c50;
+    text-align: center;
+    padding: 30px 0;
+}
+.container .article .nov3 .nover .down .right{
+    width: 300px;
+    border-right: 3px solid #8e6c50;
+}
+.container .article .nov4 .nover .left{
+    float: left;
+    width: 700px;
+    box-sizing: border-box;
+    border-left: 3px solid #8e6c50;
+    border-right: 2px solid #8e6c50;
+    border-bottom: 3px solid #8e6c50;
+    height: 100px;
+    text-align: center;
+    padding: 30px;
+}
+.container .article .nov4 .nover .right{
+    float: left;
+    width: 300px;
+    box-sizing: border-box;
+    border-right: 3px solid #8e6c50;
+    border-bottom: 3px solid #8e6c50;
+    height: 100px;
+    text-align: center;
+}
+.container .footer{
+    width: 1000px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+}

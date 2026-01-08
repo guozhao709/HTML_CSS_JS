@@ -1,0 +1,21 @@
+.container{
+    width: 950px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+a:hover{
+    background-color: #37a;
+    color: white !important;
+}
+a:active{
+    background-color: #f93;
+    color: white !important;
+}
+.a_of{
+    color: gray !important;
+}

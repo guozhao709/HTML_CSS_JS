@@ -1,0 +1,37 @@
+img{
+    width:  1920px;
+    height: 1080px;
+}
+figure p{
+    font-size: 2em;
+    background-color: azure;
+    text-align: center;
+    width: 1920px;
+}
+#biaoti{
+    color: red;
+    background-color: aquamarine;
+    font-size: 3em;
+    text-decoration: none;
+    width: 1920px;
+    text-align: center;
+}
+#mulu a{
+    color:brown;
+    text-decoration: none;
+}
+
+#zhengwen h{
+    font-size: larger;
+    background-color: aqua;
+    font-style: italic;
+    display: inline-block;
+    width: 1920px;
+   
+}
+#zhengwen p{
+    width: 1920px;
+    font-size: large;
+    text-indent: 2em;
+    line-height: 2;
+}

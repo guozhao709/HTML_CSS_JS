@@ -1,0 +1,96 @@
+.bigContainer{
+    background-color: rgba(122, 100, 100, 0.072);
+    padding-bottom: 100px;
+    padding-top: 50px;
+    
+}
+.bigContainer .container .left{
+    float: left;
+    margin-right: 30px;
+}
+.bigContainer .container .right{
+    float: right;
+    /* background-color: aqua; */
+    width: 265px;
+}
+.bigContainer .container .main{
+    float: left;
+    width: 535px;
+    height: 580px;
+    /* background-color: blue; */
+}
+.bigContainer .container .main .item{
+    float: left;
+    width: 133px;
+    height: 233px;
+}
+.bigContainer .container .main .item .pic0{
+    width: 100px;
+    height: 144px;
+}
+.bigContainer .container .main .item .pic{
+    display: block;
+    background-image: url("../picture/中部图例1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 144px;
+    text-indent: -9999px;
+}
+.bigContainer .container .main .item .name0{
+    width: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.bigContainer .container .main .item .button0{
+    width: 70px;
+    text-align: center;
+    color: white;
+    background-color: #908989;
+    margin-left: 15px;
+    padding: 5px 0;
+}
+.bigContainer .container .main h1{
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+.bigContainer .container .main h1 a{
+    color: #464141;
+}
+.bigContainer .container .left h1{
+    font-size: 24px;
+}
+.bigContainer .container .left h2{
+    margin: 10px 0;
+}
+.bigContainer .container .right .item{
+    width: 265px;
+    float: left;
+    /* height: 40px; */
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(219, 206, 206);
+    padding-bottom: 10px;
+}
+.bigContainer .container .right .item:last-child{
+    border: none;
+}
+.bigContainer .container .right .item h2{
+    float: left;
+    color: rgb(122, 130, 125);
+}
+.bigContainer .container .right .item h3{
+    float: left;
+    margin-left: 10px;
+    height: 20px;
+}
+.bigContainer .container .right h1{
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+.bigContainer .container .right h1 a{
+    color: #464141;
+}

@@ -1,0 +1,117 @@
+/*通用样式*/
+a:hover{
+    background-color: blue;
+    color: white !important;
+}
+.a_of{
+    color: gray;
+}
+
+/*通用样式*/
+.container{
+    width: 950px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+.container .left{
+    float: left;
+    width: 655px;
+}
+.container .left .title{
+    font-size: 15px;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+.container .left .title a{
+    font-size: 10px;
+    color: gray;
+}
+.container .left .item{
+    box-sizing: border-box;
+    width: 655px;
+    height: 170px;
+    /* background-color: lightblue; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #CCC;
+}
+.container .left .item .mod_left{
+    float: left;
+}
+.container .left .item .mod_left h1{
+    height: 22px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #ccc;
+}
+.container .left .item .mod_left .user{
+    display: block;
+    width: 60px;
+    height: 24px;
+    background-image: url("https://img9.doubanio.com/icon/u240534416-4.jpg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    text-indent: 30px;
+    line-height: 25px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.container .left .item .mod_left .biaoti{
+    display: block;
+    height: 19px;
+    width: 40px;
+    line-height: 19px;
+    margin-bottom: 10px;
+    color: rgb(48, 101, 118);
+}
+.container .left .item .mod_left .zhaiyao{
+    height: 21px;
+    margin-bottom: 19px;
+}
+.container .left .item .mod_left .replay{
+    height: 36px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    color: #999;
+}
+.container .left .item .mod_right{
+    float: right;
+    height: 120px;
+    width: 120px;
+    margin-top: 25px;
+}
+.container .left .item .mod_right a{
+    display: block;
+    height: inherit;
+    background-image: url("../picture/中部图例1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-indent: -9999px;
+}
+.container .right{
+    float: right;
+    margin-top: 40px;
+    /* background-color: lightblue; */
+    width: 260px;
+}
+.container .right>h1{
+    color: #072;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.container .right>h1 a{
+    color: rgb(37, 94, 112);
+    font-size: 12px;
+}
+.container .right ul li{
+    margin-bottom: 10px;
+}
+.container .right ul li a{
+    font-size: 16px;
+    color: rgb(48, 151, 214);
+}
+.container .right ul li h1{
+    color: #CCC;
+    margin-top: 5px;
+}

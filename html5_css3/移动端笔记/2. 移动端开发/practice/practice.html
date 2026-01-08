@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            /* flex-wrap: wrap; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            /* justify-content: center; */
+            /* justify-content: flex-end; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+            /* align-items: center; */
+            /* align-items: stretch; */
+            /* align-content: flex-start; */
+            /* align-content: flex-end; */
+            /* align-content: center; */
+            /* align-content: space-between; */
+            /* align-content: space-around; */
+            width: 600px;
+            height:400px;
+            margin: 150px auto;
+            background-color: pink;
+        }
+
+        section div{
+            /* flex: 1; */
+            background-color: red;
+            width: 75px;
+            height: 75px;
+            /* align-self: center; */
+        }
+        section div:nth-child(1){
+            /* align-self: center; */
+            flex: 1;
+        }
+        section div:nth-child(2){
+            flex: 1;
+            order: 3;
+        }
+        section div:nth-child(3){
+            flex: 1;
+            order: 2;
+        }
+        
+    </style>
+</head>
+
+<body>
+<section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <!-- <div>4</div>
+    <div>5</div>
+    <div>6</div> -->
+</section>
+</body>
+
+</html>

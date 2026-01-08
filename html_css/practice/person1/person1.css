@@ -1,0 +1,52 @@
+figure a img{
+    margin-left: 580px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: red;
+}
+figure h1{
+    text-align: center;
+    font-size: 4em;
+    background-color: yellow;
+    color: red;
+}
+figure p{
+    text-indent: 2em;
+    font-size: 1.2em;
+    background-color: lightblue;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#jieshao{
+    white-space: pre;
+    border-width: 10px;
+    border-style: solid;
+    border-color: aquamarine;
+    background-color: red;
+    width: 500px;
+    overflow-x: scroll;
+    margin-left: 150px;
+    display: inline-block;
+}
+div img{
+    height: 368px;
+    width: 400px;
+    object-fit: cover;
+    
+}
+#jieshao0{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 400px;
+}
+article{
+    border-style: solid;
+    border-width: 5px;
+    border-color: red;
+    margin-left: 200px;
+    margin-right: 200px;   
+}
+
+article div p{
+    text-indent: 2em;
+}
